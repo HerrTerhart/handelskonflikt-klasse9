@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173f50"><meta name="description" content="Gemeinsam gesteuertes Planspiel zu Einfuhrzoll, Freihandel und Protektionismus. Ohne Registrierung, mit eigenen Rollen und lokal gespeicherten Ergebnissen.">
+<title>Handelskonflikt – Wer gewinnt, wer verliert?</title>
+<link rel="stylesheet" href="style.css">
+<script src="engine.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Arbeitsbereich</a>
+<header class="app-header"><div class="brand"><span class="brand-symbol" aria-hidden="true">A<span>↔</span>B</span><div><strong>Handelskonflikt</strong><span>Globalisierung · Klasse 9</span></div></div><div class="header-tools"><span id="role-marker">Deine Rolle folgt</span><button type="button" id="teacher-open" class="small quiet">Lehrkraft: Klassenübersicht</button></div></header>
+<div class="workspace">
+<nav aria-label="Phasen des Planspiels"><ol id="progress" class="progress"></ol></nav>
+<div class="statusline"><span id="step-marker"></span><span id="save-status" role="status" aria-live="polite"></span></div>
+<main id="main" tabindex="-1"></main>
+<div id="validation" class="validation" role="alert" hidden></div>
+<div class="navigation"><button type="button" id="back" class="secondary">Zurück</button><p id="next-hint"></p><button type="button" id="next">Weiter</button></div>
+<footer class="app-footer"><p id="privacy">Deine Eingaben bleiben auf diesem Gerät. Gib keine persönlichen Daten ein.</p><div><button type="button" id="copy" class="quiet small">Ergebnisse kopieren</button><button type="button" id="export" class="quiet small">Textdatei herunterladen</button><button type="button" id="reset" class="quiet small danger">Neu beginnen</button></div><p class="source">Eigene Unterrichtssimulation nach dem bereitgestellten Schulbuchfall „B-Land schränkt Einfuhren aus A-Land ein“. Fiktive Ausgangslage im Jahr 2000. Spätere Folgen sind mögliche Entwicklungen.</p></footer>
+</div>
+<dialog id="confirm-dialog" aria-labelledby="confirm-title"><h2 id="confirm-title"></h2><p id="confirm-text"></p><div class="dialog-buttons"><button type="button" id="confirm-cancel" class="secondary">Abbrechen</button><button type="button" id="confirm-yes">Bestätigen</button></div></dialog>
+<dialog id="copy-dialog" aria-labelledby="copy-title"><h2 id="copy-title">Deine Ergebnisse</h2><p>Falls das direkte Kopieren nicht möglich ist: Markiere den Text und kopiere ihn mit Strg + C.</p><textarea id="copy-text" readonly aria-label="Ergebnistext zum Kopieren" rows="12"></textarea><button type="button" id="copy-close">Schließen</button></dialog>
+<dialog id="teacher-dialog" class="teacher-dialog" aria-labelledby="teacher-title"><div class="teacher-heading"><div><span class="eyebrow">Smartboard</span><h2 id="teacher-title">Gemeinsam festhalten</h2></div><button type="button" id="teacher-close" class="secondary">Schließen</button></div><p class="callout">Diese Übersicht enthält nur Einträge, die du hier selbst eintippst. Sie empfängt keine Antworten von Chromebooks.</p><div id="teacher-fields"></div><div class="teacher-decisions"><label for="class-b">Gemeinsame Entscheidung B-Land</label><select id="class-b"><option value="">Noch offen</option><option value="open">Kein zusätzlicher Einfuhrzoll</option><option value="tariff">35 % Einfuhrzoll auf Autos aus A-Land</option></select><label for="class-a">Gemeinsame Reaktion A-Land</label><select id="class-a"><option value="">Zuerst B-Lands Entscheidung festhalten</option></select><label for="class-reason">Begründung / wichtigste Erkenntnis</label><textarea id="class-reason" rows="3"></textarea></div><div class="dialog-buttons"><button type="button" id="class-export">Klassenübersicht herunterladen</button><button type="button" id="teacher-bottom-close" class="secondary">Zurück zum Planspiel</button></div></dialog>
+<noscript><div class="noscript"><h1>JavaScript ist ausgeschaltet</h1><p>Für das Planspiel muss JavaScript im Browser erlaubt sein. Nutzt sonst die analogen Rollenkarten und Arbeitsaufträge.</p></div></noscript>
+</body></html>
